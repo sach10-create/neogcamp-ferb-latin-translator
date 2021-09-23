@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ferb-Latin Translator</title>
     <style>
-         textarea{
+        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+        textarea {
             margin: 1rem;
             margin-left: auto;
             margin-right: auto;
@@ -14,22 +17,42 @@
             width: 50%;
             display: block;
             padding: 1rem;
+            background: transparent;
+            color: black;
+            font-weight: bold;
+            font-size: 1rem;
         }
-        button{
+
+        button {
             margin: 3rem;
             margin-left: auto;
             margin-right: auto;
             display: block;
             padding: 1rem;
+            font-family: 'Permanent Marker', cursive;
         }
-        </style>
+
+        body {
+            font-family: 'Permanent Marker', cursive;
+            background-image: url("images/ferb.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        ::placeholder {
+            color: black;
+            opacity: 1;
+    </style>
 </head>
+
 <body>
     <h1 style="text-align: center;"> Ferb-Latin Translator </h1>
-    <textarea id="translate-input" placeholder="Put your message here which you want to convert to ferb-latin Language"></textarea>
-     <button id="translate-button"> Translate To Ferb-Latin </button>
+    <textarea id="translate-input"
+        placeholder="Put your message here which you want to convert to ferb-latin Language"></textarea>
+    <button id="translate-button"> Translate To Ferb-Latin </button>
     <textarea id="outputBox" placeholder="Translated Language"></textarea>
     <script src="app.js" text="type/javascript"></script>
 
 </body>
+
 </html>
