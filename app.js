@@ -3,18 +3,19 @@ var userInput = document.querySelector("#translate-input");
 var outputBox = document.querySelector("#outputBox")
 var serverURL = "https://api.funtranslations.com/translate/ferb-latin.json";
 
-function getTranslationURL(text){
- return serverURL + "?" + "text=" + text;
+function getTranslationURL(text) {
+    return serverURL + "?" + "text=" + text;
 }
 
-function clickHandler(){
+function clickHandler() {
     console.log("hi");
- var user_input = userInput.value;
-fetch(getTranslationURL(user_input))
-.then(response => response.json())
-.then(json => {
-    var translatedText = json.contents.translated;
-    outputBox.innerHTML = translatedText;})
+    var user_input = userInput.value;
+    fetch(getTranslationURL(user_input))
+        .then(response => response.json())
+        .then(json => {
+            var translatedText = json.contents.translated;
+            outputBox.innerText = translatedText;
+        })
 }
 
-buttonTranslate.addEventListener("click",clickHandler);
+buttonTranslate.addEventListener("click", clickHandler);
