@@ -1,10 +1,10 @@
 var buttonTranslate = document.querySelector("#translate-button");
 var userInput = document.querySelector("#translate-input");
 var outputBox = document.querySelector("#outputBox")
-var serverURL = "	https://api.funtranslations.com/translate/ferb-latin.json";
+var serverURL = "https://api.funtranslations.com/translate/ferb-latin.json";
 
 function getTranslationURL(text){
- return serverURL + "?" + "text=" + text
+ return serverURL + "?" + "text=" + text;
 }
 
 function clickHandler(){
